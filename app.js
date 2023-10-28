@@ -120,10 +120,8 @@ function updatePrice() {
   finalCents = totalPriceInCents % 100;
 }
 
-
 cartButton.onclick = () => {
   updatePrice();
-
 
   for (let index = 0; index < items.length; index++) {
     if (items[index].quantity != 0) {
