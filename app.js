@@ -122,6 +122,7 @@ function updatePrice() {
 
 cartButton.onclick = () => {
   updatePrice();
+  let text="";
 
   for (let index = 0; index < items.length; index++) {
     if (items[index].quantity != 0) {
@@ -131,10 +132,16 @@ cartButton.onclick = () => {
           " - Quantity: " +
           items[index].quantity
       );
+      text+= "Item name: " +
+      items[index].name +
+      " - Quantity: " +
+      items[index].quantity
     }
   }
 
   console.log(
     "The total amount is " + finalDollars + "$ and " + finalCents + " cents"
   );
+  text+="The total amount is " + finalDollars + "$ and " + finalCents + " cents"
+  window.open("https://wa.me/7670937152?text="+text)
 };
